@@ -133,9 +133,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8080",
-]
 
 
 # Static files (CSS, JavaScript, Images)
