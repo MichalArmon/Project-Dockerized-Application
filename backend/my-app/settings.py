@@ -29,7 +29,11 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
 # ALLOWED_HOSTS = os.environ.get(
 #     "ALLOWED_HOSTS", "localhost,127.0.0.1,project-dockerized-application.onrender.com"
 # ).split(",")
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "project-dockerized-application-1.onrender.com",
+]
 
 
 # Application definition
