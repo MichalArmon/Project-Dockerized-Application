@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: project-dockerized-application-blueprint
+    runtime: docker
+    branch: main
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: dev-secret-key
+      - key: DJANGO_DEBUG
+        value: "1"
+
+  - type: web
+    name: project-dockerized-application-frontend-blueprint
+    runtime: docker
+    branch: main
+    rootDir: frontend
+    dockerfilePath: ./Dockerfile
+    plan: free
