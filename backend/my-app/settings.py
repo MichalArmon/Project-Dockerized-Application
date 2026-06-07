@@ -34,6 +34,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "project-dockerized-application-1.onrender.com",
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://project-dockerized-application-1.onrender.com",
+]
 
 
 # Application definition
