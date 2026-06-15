@@ -18,7 +18,19 @@
 
   <ul>
     {% for task in tasks %}
-    <li>{{ task.title }} — {{ task.created_at }}</li>
+    <li>
+      <span {% if task.completed %} style="text-decoration: line-through; color: gray;" {% endif %}>
+        {{ task.title }} — {{ task.created_at }}
+      </span>
+
+      <a href="{% url 'toggle_task' task.id %}">
+        {% if task.completed %}
+        Mark as open
+        {% else %}
+        Mark as completed
+        {% endif %}
+      </a>
+    </li>
     {% empty %}
     <li>No tasks yet.</li>
     {% endfor %}
