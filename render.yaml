@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: project-dockerized-application-blueprint
+    name: project-dockerized-application-backend
     runtime: docker
     branch: main
     rootDir: backend
@@ -20,12 +20,11 @@ services:
           property: connectionString
 
   - type: web
-    name: project-dockerized-application-frontend-blueprint
-    runtime: docker
+    name: project-dockerized-application-frontend
+    runtime: static
     branch: main
     rootDir: frontend
-    dockerfilePath: ./Dockerfile
-    plan: free
+    staticPublishPath: .
 
 databases:
   - name: todo-postgres
