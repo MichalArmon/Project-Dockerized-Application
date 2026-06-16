@@ -6,11 +6,18 @@ services:
     rootDir: backend
     dockerfilePath: ./Dockerfile
     plan: free
+
     envVars:
       - key: DJANGO_SECRET_KEY
-        value: dev-secret-key
+        generateValue: true
+
       - key: DJANGO_DEBUG
-        value: "1"
+        value: "0"
+
+      - key: DATABASE_URL
+        fromDatabase:
+          name: todo-postgres
+          property: connectionString
 
   - type: web
     name: project-dockerized-application-frontend-blueprint
@@ -18,4 +25,8 @@ services:
     branch: main
     rootDir: frontend
     dockerfilePath: ./Dockerfile
+    plan: free
+
+databases:
+  - name: todo-postgres
     plan: free
