@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My To-Do Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="page-container">
+
+    <header class="header">
+      <h1>My To-Do Dashboard</h1>
+
+      <p>
+        Organize your tasks and track your progress.
+      </p>
+    </header>
+
+
+    <section class="dashboard">
+
+      <article class="stat-card">
+        <p class="stat-label">
+          Total tasks
+        </p>
+
+        <p id="total-tasks" class="stat-number">
+          0
+        </p>
+      </article>
+
+
+      <article class="stat-card">
+        <p class="stat-label">
+          Completed
+        </p>
+
+        <p id="completed-tasks" class="stat-number">
+          0
+        </p>
+      </article>
+
+
+      <article class="stat-card">
+        <p class="stat-label">
+          Open tasks
+        </p>
+
+        <p id="open-tasks" class="stat-number">
+          0
+        </p>
+      </article>
+
+    </section>
+
+
+    <section class="form-card">
+
+      <form id="task-form" class="task-form">
+
+        <input id="task-title" type="text" placeholder="What do you need to do?" autocomplete="off" maxlength="200"
+          required>
+
+        <button id="add-task-button" type="submit" class="primary-button">
+          Add task
+        </button>
+
+      </form>
+
+      <p id="form-error" class="form-error" hidden></p>
+
+    </section>
+
+
+    <section class="tasks-card">
+
+      <div class="tasks-header">
+
+        <h2 class="tasks-title">
+          Your tasks
+        </h2>
+
+        <button id="refresh-button" type="button" class="refresh-button">
+          Refresh
+        </button>
+
+      </div>
+
+
+      <ul id="task-list" class="task-list">
+
+        <li class="empty-message">
+          Loading tasks...
+        </li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
