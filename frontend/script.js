@@ -22,7 +22,8 @@ const LOCAL_API_URL = "/api/tasks/";
   https://todo-backend.onrender.com/api/tasks/
 */
 
-const RENDER_API_URL = "https://YOUR-BACKEND-NAME.onrender.com/api/tasks/";
+const RENDER_API_URL =
+  "https://project-dockerized-application-backend.onrender.com/api/tasks/";
 
 const isLocalEnvironment =
   window.location.hostname === "localhost" ||
