@@ -157,5 +157,5 @@ STATIC_URL = "static/"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://project-dockerized-application-frontend.onrender.com",
+    "https://project-dockerized-application-frontend-qcdv.onrender.com",
 ]
