@@ -24,7 +24,7 @@ services:
     runtime: static
     branch: main
     rootDir: frontend
-    staticPublishPath: .
+    staticPublishPath: ./frontend
 
 databases:
   - name: todo-postgres
